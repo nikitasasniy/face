@@ -23,4 +23,4 @@ jobs:
       run: docker build . -t ancici/faces2-app:latest
 
     - name: Push Docker image to DockerHub
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/faces2-app:latest
+      run: docker push ancici/faces2-app:latest
