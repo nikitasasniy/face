@@ -15,9 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 WORKDIR /app
 
-# Загрузка модели для DNN (в реальном проекте лучше добавить модель в репозиторий)
-RUN curl -o res10_300x300_ssd_iter_140000_fp16.caffemodel https://github.com/opencv/opencv/blob/master/samples/dnn/face_detector/res10_300x300_ssd_iter_140000_fp16.caffemodel?raw=true
-RUN curl -o deploy.prototxt https://github.com/opencv/opencv/blob/master/samples/dnn/face_detector/deploy.prototxt?raw=true
+## Загрузка модели для DNN (в реальном проекте лучше добавить модель в репозиторий)
+#RUN curl -o res10_300x300_ssd_iter_140000_fp16.caffemodel https://github.com/opencv/opencv/blob/master/samples/dnn/face_detector/res10_300x300_ssd_iter_140000_fp16.caffemodel?raw=true
+#RUN curl -o deploy.prototxt https://github.com/opencv/opencv/blob/master/samples/dnn/face_detector/deploy.prototxt?raw=true
 
 # Запуск скрипта face_detection.py при запуске контейнера
 CMD ["python", "face_detection.py"]
